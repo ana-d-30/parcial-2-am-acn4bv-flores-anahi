@@ -1,6 +1,7 @@
 package com.example.monedy;
 
 import android.os.Bundle;
+import android.content.Intent;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -52,10 +53,38 @@ public class HomeActivity extends AppCompatActivity {
 
         Button btnAdd = findViewById(R.id.btnAdd);
 
+        Button btnDetail = findViewById(R.id.btnDetail);
+
+
         containerMovements = findViewById(R.id.containerMovements);
 
 
         btnAdd.setOnClickListener(v -> addMovement());
+
+
+        btnDetail.setOnClickListener(v -> {
+
+            Intent intent = new Intent(
+                    HomeActivity.this,
+                    DetailActivity.class
+            );
+
+
+            intent.putExtra(
+                    "movement_name",
+                    "Supermercado"
+            );
+
+
+            intent.putExtra(
+                    "movement_amount",
+                    "- $12500"
+            );
+
+
+            startActivity(intent);
+
+        });
     }
 
 

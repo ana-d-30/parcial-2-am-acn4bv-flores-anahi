@@ -20,5 +20,10 @@
     <string name="movement_title">Últimos movimientos</string>
     <string name="btn_add">Agregar movimiento</string>
 
+    <string name="detail_title">Detalle del movimiento</string>
+    <string name="detail_name">Movimiento</string>
+    <string name="detail_amount">Monto</string>
+    <string name="detail_status">Estado: Realizado</string>
+    <string name="detail_back">Volver</string>
 
 </resources>
