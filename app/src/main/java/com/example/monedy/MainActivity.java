@@ -1,11 +1,10 @@
 package com.example.monedy;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.graphics.Color;
-import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,8 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    private LinearLayout containerMovements;
-    private int movementCounter = 1;
+    private EditText etPin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,29 +28,18 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        Button btnAdd = findViewById(R.id.btnAdd);
-        containerMovements = findViewById(R.id.containerMovements);
+        etPin = findViewById(R.id.etPin);
+        Button btnLogin = findViewById(R.id.btnLogin);
 
-        btnAdd.setOnClickListener(v -> addMovement());
-    }
+        btnLogin.setOnClickListener(v -> {
+            String pin = etPin.getText().toString();
 
-    private void addMovement() {
-        TextView movement = new TextView(this);
-
-        movementCounter++;
-
-        movement.setText("Transferencia recibida " + movementCounter + "    + $25000");
-        movement.setTextSize(16);
-        movement.setTextColor(Color.rgb(0, 150, 136));
-
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
-                ViewGroup.LayoutParams.MATCH_PARENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT
-        );
-
-        params.setMargins(0, 24, 0, 0);
-        movement.setLayoutParams(params);
-
-        containerMovements.addView(movement);
+            if (pin.equals("1234")) {
+                Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                startActivity(intent);
+            } else {
+                Toast.makeText(this, getString(R.string.login_error), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

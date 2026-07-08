@@ -2,6 +2,14 @@
 
     <string name="app_name">Monedy</string>
 
+    <!-- Login -->
+    <string name="login_title">Ingresá a tu cuenta</string>
+    <string name="login_subtitle">Usá tu PIN para continuar</string>
+    <string name="login_pin_hint">PIN</string>
+    <string name="login_button">Ingresar</string>
+    <string name="login_error">PIN incorrecto</string>
+
+    <!-- Home -->
     <string name="welcome_text">Hola, Usuario</string>
     <string name="balance_title">Saldo disponible</string>
     <string name="balance_amount">$ 1.245.320</string>
@@ -10,7 +18,7 @@
     <string name="card_number">**** 4589</string>
 
     <string name="movement_title">Últimos movimientos</string>
-
     <string name="btn_add">Agregar movimiento</string>
+
 
 </resources>
