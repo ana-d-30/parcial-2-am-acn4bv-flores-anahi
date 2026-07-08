@@ -1,0 +1,16 @@
+<resources>
+
+    <string name="app_name">Monedy</string>
+
+    <string name="welcome_text">Hola, Usuario</string>
+    <string name="balance_title">Saldo disponible</string>
+    <string name="balance_amount">$ 1.245.320</string>
+
+    <string name="card_title">Cuenta principal</string>
+    <string name="card_number">**** 4589</string>
+
+    <string name="movement_title">Últimos movimientos</string>
+
+    <string name="btn_add">Agregar movimiento</string>
+
+</resources>

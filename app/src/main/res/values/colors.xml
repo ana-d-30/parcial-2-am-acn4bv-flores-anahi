@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="primary">#5B2EFF</color>
+    <color name="primary_dark">#4019B8</color>
+    <color name="secondary">#8A63FF</color>
+
+    <color name="background">#F7F7FC</color>
+
+
+    <color name="text_primary">#202124</color>
+    <color name="text_secondary">#757575</color>
+
+    <color name="positive">#009688</color>
+    <color name="negative">#D32F2F</color>
+</resources>
