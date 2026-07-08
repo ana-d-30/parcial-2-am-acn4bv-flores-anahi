@@ -40,6 +40,15 @@ public class HomeActivity extends AppCompatActivity {
             return insets;
         });
 
+        TextView tvWelcome = findViewById(R.id.tvWelcome);
+
+        String usuario = getIntent().getStringExtra("usuario");
+
+        if (usuario != null) {
+
+            tvWelcome.setText("Hola, " + usuario);
+
+        }
 
         Button btnAdd = findViewById(R.id.btnAdd);
 

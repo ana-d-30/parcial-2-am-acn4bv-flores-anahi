@@ -32,14 +32,40 @@ public class MainActivity extends AppCompatActivity {
         Button btnLogin = findViewById(R.id.btnLogin);
 
         btnLogin.setOnClickListener(v -> {
+
             String pin = etPin.getText().toString();
 
+
             if (pin.equals("1234")) {
-                Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+
+
+                Intent intent = new Intent(
+                        MainActivity.this,
+                        HomeActivity.class
+                );
+
+
+                intent.putExtra(
+                        "usuario",
+                        "Anahi"
+                );
+
+
                 startActivity(intent);
+
+
             } else {
-                Toast.makeText(this, getString(R.string.login_error), Toast.LENGTH_SHORT).show();
+
+
+                Toast.makeText(
+                        this,
+                        getString(R.string.login_error),
+                        Toast.LENGTH_SHORT
+                ).show();
+
+
             }
+
         });
     }
 }
